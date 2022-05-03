@@ -8,16 +8,17 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>租云服务器及配环境&amp;安装Docker | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="纯纯小白手把手超详细教程（by Hazel自用避免踩坑版） 概述——一些废话 云平台的作用   存放docker容器，让计算跑在云端 获得公网IP地址，让每个人都可以访问到我们的服务   任选一个云平台即可（推荐阿里云）选择如下配置：   1核2GB（后期可以扩容，前期配置可以低一点） 网络带宽采用按量付费，最大带宽拉满即可 系统版本   租到的服务器   毛坯（框架，thrift） 服务（soc">
+  <meta name="description" content="本地装linux系统坑实在太多了，租云服务器是学习成本最低的途径了，对本地的唯一要求是只要有个终端就ok，况且学生党一年不到一百块此时不租更待何时？！玩转自己的服务器非常方便，只需要组服务器+配置docker两步即可，这个教程是为了防止自己忘记步骤的记录：纯纯小白手把手超详细教程（by Hazel自用避免踩坑版）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="租云服务器及配环境&amp;安装Docker">
 <meta property="og:url" content="http://example.com/2022/05/02/%E7%A7%9F%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E9%85%8D%E7%8E%AF%E5%A2%83-%E5%AE%89%E8%A3%85Docker/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="纯纯小白手把手超详细教程（by Hazel自用避免踩坑版） 概述——一些废话 云平台的作用   存放docker容器，让计算跑在云端 获得公网IP地址，让每个人都可以访问到我们的服务   任选一个云平台即可（推荐阿里云）选择如下配置：   1核2GB（后期可以扩容，前期配置可以低一点） 网络带宽采用按量付费，最大带宽拉满即可 系统版本   租到的服务器   毛坯（框架，thrift） 服务（soc">
+<meta property="og:description" content="本地装linux系统坑实在太多了，租云服务器是学习成本最低的途径了，对本地的唯一要求是只要有个终端就ok，况且学生党一年不到一百块此时不租更待何时？！玩转自己的服务器非常方便，只需要组服务器+配置docker两步即可，这个教程是为了防止自己忘记步骤的记录：纯纯小白手把手超详细教程（by Hazel自用避免踩坑版）">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-05-02T11:31:10.000Z">
-<meta property="article:modified_time" content="2022-05-02T11:35:20.696Z">
+<meta property="article:modified_time" content="2022-05-03T04:53:41.209Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Linux基础">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -60,6 +61,8 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+	        
+				<li><a href="/archives/index.html">归档</a></li>
 	        
 			</ul>
 		</nav>
@@ -115,6 +118,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -130,12 +135,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -150,7 +157,8 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-租云服务器及配环境-安装Docker" class="article article-type-post " itemscope itemprop="blogPost">
+            
+<article id="post-租云服务器及配环境-安装Docker" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -170,7 +178,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>纯纯小白手把手超详细教程（by Hazel自用避免踩坑版）</p>
+        <p>本地装linux系统坑实在太多了，租云服务器是学习成本最低的途径了，对本地的唯一要求是只要有个终端就ok，况且学生党一年不到一百块此时不租更待何时？！玩转自己的服务器非常方便，只需要组服务器+配置docker两步即可，这个教程是为了防止自己忘记步骤的记录：纯纯小白手把手超详细教程（by Hazel自用避免踩坑版）</p>
+<span id="more"></span>
 <h2 id="概述——一些废话"><a href="#概述——一些废话" class="headerlink" title="概述——一些废话"></a>概述——一些废话</h2><ul>
 <li>云平台的作用</li>
 </ul>
@@ -298,6 +307,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Linux基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -348,11 +368,12 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/05/02/%E7%A7%9F%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E9%85%8D%E7%8E%AF%E5%A2%83-%E5%AE%89%E8%A3%85Docker/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yangtzuho.github.io/022/05/02/%E7%A7%9F%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E9%85%8D%E7%8E%AF%E5%A2%83-%E5%AE%89%E8%A3%85Docker/" alt="微信分享二维码">
     </div>
 </div>
 
 <div class="mask js-mask"></div>
+
       
       <div class="clearfix"></div>
     </div>
@@ -388,6 +409,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0%E2%80%94%E2%80%94%E4%B8%80%E4%BA%9B%E5%BA%9F%E8%AF%9D"><span class="toc-number">1.</span> <span class="toc-text">概述——一些废话</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91-https-www-aliyun-com"><span class="toc-number">2.</span> <span class="toc-text">阿里云(https:&#x2F;&#x2F;www.aliyun.com)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="toc-number">2.1.</span> <span class="toc-text">基础配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%92%8C%E5%AE%89%E5%85%A8%E7%BB%84"><span class="toc-number">2.2.</span> <span class="toc-text">网络和安全组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-number">2.3.</span> <span class="toc-text">系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%96%B9%E5%BC%8F"><span class="toc-number">2.4.</span> <span class="toc-text">登录服务器方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAsudo%E6%9D%83%E9%99%90%E7%94%A8%E6%88%B7"><span class="toc-number">2.5.</span> <span class="toc-text">创建sudo权限用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95"><span class="toc-number">2.6.</span> <span class="toc-text">配置免密登录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Docker"><span class="toc-number">3.</span> <span class="toc-text">安装Docker</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%8E%AF%E5%A2%83%EF%BC%88%E8%A3%85%E4%B8%AAtmux%E5%B0%B1%E5%A4%9F%E4%BA%86%EF%BC%8C%E5%9B%A0%E4%B8%BA%E4%B9%8B%E5%90%8E%E4%B8%BB%E8%A6%81%E6%98%AF%E5%9C%A8docker%E4%B8%8A%E5%BC%80%E5%8F%91%EF%BC%89"><span class="toc-number">3.1.</span> <span class="toc-text">配环境（装个tmux就够了，因为之后主要是在docker上开发）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker%E5%AE%89%E8%A3%85%E5%9C%B0%E5%9D%80%EF%BC%88docker-https-docs-docker-com-engine-install-ubuntu"><span class="toc-number">3.2.</span> <span class="toc-text">Docker安装地址（docker)[https:&#x2F;&#x2F;docs.docker.com&#x2F;engine&#x2F;install&#x2F;ubuntu&#x2F;]</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -402,6 +436,7 @@
   
 
   
+
 
 
           </div>
