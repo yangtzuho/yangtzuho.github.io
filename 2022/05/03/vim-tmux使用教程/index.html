@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>vim&amp;tmux使用教程 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="TmuxTmux的两个主要作用：  分屏 terminal连接断开之后，继续运行  概念Session，Window，Pane每个tmux可以开很多session，每个session可以开很多window，每个window可以开很多pane（每个pane会打开一个shell对话框）Y总说他一般是用session和pane这两级（只开一个window） 操作 tmux:新建一个session，其中包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vim&amp;tmux使用教程">
+<meta property="og:url" content="http://example.com/2022/05/03/vim-tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="TmuxTmux的两个主要作用：  分屏 terminal连接断开之后，继续运行  概念Session，Window，Pane每个tmux可以开很多session，每个session可以开很多window，每个window可以开很多pane（每个pane会打开一个shell对话框）Y总说他一般是用session和pane这两级（只开一个window） 操作 tmux:新建一个session，其中包">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-05-03T04:28:40.000Z">
+<meta property="article:modified_time" content="2022-05-03T04:33:10.351Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Linux基础">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -146,16 +151,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-vim-tmux使用教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-vim-tmux使用教程" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/05/03/vim-tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">vim&amp;tmux使用教程</a>
+    <h1 class="article-title" itemprop="name">
+      vim&amp;tmux使用教程
     </h1>
   
 
@@ -261,6 +264,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -279,16 +303,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/05/03/vim-tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/05/03/vim-tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2022/05/02/%E7%A7%9F%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E9%85%8D%E7%8E%AF%E5%A2%83-%E5%AE%89%E8%A3%85Docker/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">租云服务器及配环境&amp;安装Docker</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -308,169 +391,14 @@
 
 
 
-
   
-    <article id="post-租云服务器及配环境-安装Docker" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/05/02/%E7%A7%9F%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E9%85%8D%E7%8E%AF%E5%A2%83-%E5%AE%89%E8%A3%85Docker/">租云服务器及配环境&amp;安装Docker</a>
-    </h1>
   
 
-        
-        <a href="/2022/05/02/%E7%A7%9F%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E9%85%8D%E7%8E%AF%E5%A2%83-%E5%AE%89%E8%A3%85Docker/" class="archive-article-date">
-  	<time datetime="2022-05-02T11:31:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>纯纯小白手把手超详细教程（by Hazel自用避免踩坑版）</p>
-<h2 id="概述——一些废话"><a href="#概述——一些废话" class="headerlink" title="概述——一些废话"></a>概述——一些废话</h2><ul>
-<li>云平台的作用</li>
-</ul>
-<ol>
-<li>存放docker容器，让计算跑在云端</li>
-<li>获得公网IP地址，让每个人都可以访问到我们的服务</li>
-</ol>
-<ul>
-<li>任选一个云平台即可（推荐阿里云）<br>选择如下配置：</li>
-</ul>
-<ol>
-<li>1核2GB（后期可以扩容，前期配置可以低一点）</li>
-<li>网络带宽采用按量付费，最大带宽拉满即可</li>
-<li>系统版本</li>
-</ol>
-<ul>
-<li>租到的服务器</li>
-</ul>
-<ol>
-<li>毛坯（框架，thrift）</li>
-<li>服务（socket：ip+port， http等）</li>
-</ol>
-<p>一般采用的方式：<br>Terminal——-租到的服务器————docker<br>租到的服务器上可以装任意多个docker<br>Docker具有迁移的作用，且可以直接使用已经配置好环境的docker镜像，可以省掉配环境的过程，避免一些踩坑。。。</p>
-<ul>
-<li>登录到docker的两种方式：</li>
-</ul>
-<ol>
-<li>先登录到自己租的服务器上，再attach到docker</li>
-<li>由于docker可以直接看做一个独立的linux环境，直接把docker容器配置好ssh登录（现成的镜像，不用自己配置）</li>
-</ol>
-<h2 id="阿里云-https-www-aliyun-com"><a href="#阿里云-https-www-aliyun-com" class="headerlink" title="阿里云(https://www.aliyun.com)"></a>阿里云(<a target="_blank" rel="noopener" href="https://www.aliyun.com/">https://www.aliyun.com</a>)</h2><h3 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h3><ul>
-<li>注册账号</li>
-<li>点开左上角，选择ECS服务器</li>
-<li>点击实例—创建实例——自定义购买</li>
-</ul>
-<p><strong>付费模式</strong>：包年包月<br><strong>地域及可用区</strong>：选离自己近的就行<br><strong>实例规格</strong>：选个1核2GB的就行<br><strong>镜像</strong>：Ubuntu 20.04<br>其余默认</p>
-<h3 id="网络和安全组"><a href="#网络和安全组" class="headerlink" title="网络和安全组"></a>网络和安全组</h3><ul>
-<li>网络直接默认</li>
-<li>公网IP一定要点上（服务器最主要的两个功能之一就是拥有公网IP！）</li>
-<li>带宽计费模式——选择按量付费———直接拉满（100Mb&#x2F;s）</li>
-<li>安全组如果没有要新建一个安全组，安全组是控制服务器的哪些端口是可以让别人访问的，一般默认就行。<br>— 80端口http：如果未来有网站的话，就是访问网站的端口<br>— 443端口https<br>— 22 SSH：一定要开，可以通过ssh连接<br>— 3389没用 删掉</li>
-</ul>
-<h3 id="系统配置"><a href="#系统配置" class="headerlink" title="系统配置"></a>系统配置</h3><ul>
-<li><p>登录名选root获取最高权限，自定义密码981008@Yzh</p>
-</li>
-<li><p>其余全部默认即可</p>
-</li>
-<li><p>后面全部默认直到确认下单。。。</p>
-</li>
-</ul>
-<p>控制台刷新就可以看到自己租的服务器了！！<br>阿里云的服务器默认的是root用户（腾讯云貌似不是root？）</p>
-<h3 id="登录服务器方式"><a href="#登录服务器方式" class="headerlink" title="登录服务器方式"></a>登录服务器方式</h3><p>打开终端：ssh root@+公有ip地址</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh root@101.132.65.34</span><br><span class="line">ssh root@139.196.48.243</span><br></pre></td></tr></table></figure>
-<p>登录到的就是刚刚租的服务器，可以看看配置什么的…</p>
-<h3 id="创建sudo权限用户"><a href="#创建sudo权限用户" class="headerlink" title="创建sudo权限用户"></a>创建sudo权限用户</h3><p>租完服务器后登到的用户默认是根用户，一般不推荐直接在根用户下操作，因为根用户的权限太大了，有可能不小心删除系统文件，一般推荐创建非根用户，然后给该用户分配sudo权限。</p>
-<ul>
-<li>创建hazel用户：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adduser hazel //创建hazel用户 密码：*** 然后一路回车</span><br><span class="line">usermod -aG sudo hazel //给hazel用户分配sudo权限</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="配置免密登录"><a href="#配置免密登录" class="headerlink" title="配置免密登录"></a>配置免密登录</h3><p>接下来logout 退回到终端，然后配置hazel用户的<strong>免密登录</strong></p>
-<ul>
-<li><p>配置文件<br>创建文件 <code>~/.ssh.config</code><br>然后在文件中输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Host myserver</span><br><span class="line">	HostName IP地址或域名</span><br><span class="line">	User 用户名</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>密钥登录（创建密钥太长不看直接一键添加更方便）<br>创建密钥：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
-<p>然后一直回车即可<br>执行结束后，~&#x2F;.ssh&#x2F;目录下会多两个文件：</p>
-</li>
-</ul>
-<ol>
-<li>id_rsa:私钥</li>
-<li>id_rsa.pub:公钥<br>之后想免密登录哪个服务器几句将公钥传给哪个服务器即可&#x2F;<br>例如：想登录myserver服务器，则将公钥中的内容，复制到myserver中的<code>~/.ssh/authorized_keys</code>文件中即可.</li>
-</ol>
-<p><strong>也可以使用如下命令一键添加公钥！</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id myserver</span><br></pre></td></tr></table></figure>
-<p>输入密码后免密登录配置完成！</p>
-<h2 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h2><h3 id="配环境（装个tmux就够了，因为之后主要是在docker上开发）"><a href="#配环境（装个tmux就够了，因为之后主要是在docker上开发）" class="headerlink" title="配环境（装个tmux就够了，因为之后主要是在docker上开发）"></a>配环境（装个tmux就够了，因为之后主要是在docker上开发）</h3><p>经过上面一系列操作就可以方便地登录到自己租的服务器上了，下面安装docker，在安装docker之前先给毛坯配环境：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install tmux</span><br></pre></td></tr></table></figure>
-
-<p><code>Tmux</code>  装好后发现跟之前用的配置不一样，怎么把它调成自己熟悉的样子呢？那就把自己之前用的配置文件给传到租的服务器上，logout回终端</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp .bashrc .vimrc .tmux.conf hazel:</span><br></pre></td></tr></table></figure>
-
-<p>然后再登录到自己的服务器上，再用tmux就找回了初恋的感觉！（bushi</p>
-<h3 id="Docker安装地址（docker-https-docs-docker-com-engine-install-ubuntu"><a href="#Docker安装地址（docker-https-docs-docker-com-engine-install-ubuntu" class="headerlink" title="Docker安装地址（docker)[https://docs.docker.com/engine/install/ubuntu/]"></a>Docker安装地址（docker)[<a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/]">https://docs.docker.com/engine/install/ubuntu/]</a></h3><p>往下翻到安装页面，直接把命令一个一个复制就ok（要在tmux里装，这样闪退了也可以找回之前的进程）<br>装完以后看一下docker版本，看到版本号就配置成功了</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker --version</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/05/02/%E7%A7%9F%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E9%85%8D%E7%8E%AF%E5%A2%83-%E5%AE%89%E8%A3%85Docker/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -493,8 +421,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
