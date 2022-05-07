@@ -6,21 +6,51 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>vim&amp;tmux使用教程 | Hexo</title>
+  <title>每日一题——取硬币 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="vim和tmux是初学linux的必备工具，有很多命令刚开始学的时候很容易忘记，这篇文章总结了vim和tmux最常用的50个左右的命令，多用用就全部记住啦～熟练使用的唯一秘诀就是唯手熟尔～">
+  <meta name="description" content="2022.5.7背包问题 今日头条笔试题 题目描述现在有  种面值的硬币，其中前  种为普通币，可以取任意枚，后  种为纪念币，每种最多只能取 1 枚，每种硬币有一个面值，问能用多少种方法拼出  的面值？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim&amp;tmux使用教程">
-<meta property="og:url" content="http://example.com/2022/05/03/vim-tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:title" content="每日一题——取硬币">
+<meta property="og:url" content="http://example.com/2022/05/07/20220507%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="vim和tmux是初学linux的必备工具，有很多命令刚开始学的时候很容易忘记，这篇文章总结了vim和tmux最常用的50个左右的命令，多用用就全部记住啦～熟练使用的唯一秘诀就是唯手熟尔～">
+<meta property="og:description" content="2022.5.7背包问题 今日头条笔试题 题目描述现在有  种面值的硬币，其中前  种为普通币，可以取任意枚，后  种为纪念币，每种最多只能取 1 枚，每种硬币有一个面值，问能用多少种方法拼出  的面值？">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-05-03T04:28:40.000Z">
-<meta property="article:modified_time" content="2022-05-05T04:15:19.885Z">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?n_1&plus;n_2">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?n_1">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?n_2">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?m">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?n_1,n_2,m">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?n_1">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?i">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?a[i]">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?a[i]">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?n_2">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?i">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?b[i]">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?b[i]">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?x">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?10^9&plus;7">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?30%">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?1\leqslant&space;n_1&plus;n_2\leqslant&space;10,1\leqslant&space;m\leqslant&space;100,&space;1\leqslant&space;a[i]\leqslant&space;100,&space;1\leqslant&space;b[i]\leqslant&space;100">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?100%">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?1\leqslant&space;n_1&plus;n_2\leqslant&space;100,1\leqslant&space;m\leqslant&space;100000,&space;1\leqslant&space;a[i]\leqslant&space;100000,&space;1\leqslant&space;b[i]\leqslant&space;100000">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?n_1">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?n_2">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?f[i,j]">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?f[i,j]">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?f[i-1,j]">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?f[i,j]=f[i-1,j]&plus;f[i-1,j-p[i]]">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?f[i,j]=f[i-1,j]&plus;f[i-1,j-p[i]\times&space;1]&plus;f[i-1,j-p[i]\times&space;2]&space;...&space;">
+<meta property="og:image" content="https://latex.codecogs.com/svg.image?f[i,j]=f[i-1,j]&plus;f[i,j-p[i]]">
+<meta property="article:published_time" content="2022-05-07T15:09:50.000Z">
+<meta property="article:modified_time" content="2022-05-07T15:13:39.554Z">
 <meta property="article:author" content="Hazel Yang">
-<meta property="article:tag" content="Linux基础">
-<meta property="article:tag" content="技术学习">
+<meta property="article:tag" content="每日一题">
+<meta property="article:tag" content="动态规划">
+<meta property="article:tag" content="背包问题">
+<meta property="article:tag" content="今日头条笔试题">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://latex.codecogs.com/svg.image?n_1&plus;n_2">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -169,20 +199,20 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-vim-tmux使用教程" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-20220507每日一题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      vim&amp;tmux使用教程
+      每日一题——取硬币
     </h1>
   
 
         
-        <a href="/2022/05/03/vim-tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2022-05-03T04:28:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-03</time>
+        <a href="/2022/05/07/20220507%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2022-05-07T15:09:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-07</time>
 </a>
         
       </header>
@@ -192,97 +222,48 @@
 
 
       
-        <p>vim和tmux是初学linux的必备工具，有很多命令刚开始学的时候很容易忘记，这篇文章总结了vim和tmux最常用的50个左右的命令，多用用就全部记住啦～熟练使用的唯一秘诀就是唯手熟尔～</p>
+        <h3 id="2022-5-7"><a href="#2022-5-7" class="headerlink" title="2022.5.7"></a>2022.5.7</h3><p><code>背包问题</code> <code>今日头条笔试题</code></p>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>现在有 <img src="https://latex.codecogs.com/svg.image?n_1&plus;n_2" title="https://latex.codecogs.com/svg.image?n_1+n_2" /> 种面值的硬币，其中前 <img src="https://latex.codecogs.com/svg.image?n_1" title="https://latex.codecogs.com/svg.image?n_1" /> 种为普通币，可以取任意枚，后 <img src="https://latex.codecogs.com/svg.image?n_2" title="https://latex.codecogs.com/svg.image?n_2" /> 种为纪念币，每种最多只能取 1 枚，每种硬币有一个面值，问能用多少种方法拼出 <img src="https://latex.codecogs.com/svg.image?m" title="https://latex.codecogs.com/svg.image?m" /> 的面值？</p>
 <span id="more"></span>
-<h1 id="Tmux"><a href="#Tmux" class="headerlink" title="Tmux"></a>Tmux</h1><p><strong>Tmux的两个主要作用：</strong></p>
+
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行包含三个整数 <img src="https://latex.codecogs.com/svg.image?n_1,n_2,m" title="https://latex.codecogs.com/svg.image?n_1,n_2,m" />，分别表示普通币种类数，纪念币种类数和目标面值；</p>
+<p>第二行 <img src="https://latex.codecogs.com/svg.image?n_1">  个整数，第 <img src="https://latex.codecogs.com/svg.image?i" title="https://latex.codecogs.com/svg.image?i" /> 种普通币的面值 <img src="https://latex.codecogs.com/svg.image?a[i]" title="https://latex.codecogs.com/svg.image?a[i]" />。保证 <img src="https://latex.codecogs.com/svg.image?a[i]" title="https://latex.codecogs.com/svg.image?a[i]" /> 为严格升序；</p>
+<p>第三行 <img src="https://latex.codecogs.com/svg.image?n_2" > 个整数，第 <img src="https://latex.codecogs.com/svg.image?i" title="https://latex.codecogs.com/svg.image?i" /> 种纪念币的面试 <img src="https://latex.codecogs.com/svg.image?b[i]" title="https://latex.codecogs.com/svg.image?b[i]" />。保证 <img src="https://latex.codecogs.com/svg.image?b[i]" title="https://latex.codecogs.com/svg.image?b[i]" /> 为严格升序。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>共一行，包含一个整数 <img src="https://latex.codecogs.com/svg.image?x" title="https://latex.codecogs.com/svg.image?x" />，表示方法总数对 <img src="https://latex.codecogs.com/svg.image?10^9&plus;7" title="https://latex.codecogs.com/svg.image?10^9+7" /> 取模后的结果。</p>
+<p>注意，不要忘记取模。</p>
+<h3 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h3><p>对于 <img src="https://latex.codecogs.com/svg.image?30%" title="https://latex.codecogs.com/svg.image?30%" /> 的数据，保证 <img src="https://latex.codecogs.com/svg.image?1\leqslant&space;n_1&plus;n_2\leqslant&space;10,1\leqslant&space;m\leqslant&space;100,&space;1\leqslant&space;a[i]\leqslant&space;100,&space;1\leqslant&space;b[i]\leqslant&space;100" title="https://latex.codecogs.com/svg.image?1\leqslant n_1+n_2\leqslant 10,1\leqslant m\leqslant 100, 1\leqslant a[i]\leqslant 100, 1\leqslant b[i]\leqslant 100" />。</p>
+<p>对于 <img src="https://latex.codecogs.com/svg.image?100%" title="https://latex.codecogs.com/svg.image?100%" /> 的数据，保证<img src="https://latex.codecogs.com/svg.image?1\leqslant&space;n_1&plus;n_2\leqslant&space;100,1\leqslant&space;m\leqslant&space;100000,&space;1\leqslant&space;a[i]\leqslant&space;100000,&space;1\leqslant&space;b[i]\leqslant&space;100000" title="https://latex.codecogs.com/svg.image?1\leqslant n_1+n_2\leqslant 100,1\leqslant m\leqslant 100000, 1\leqslant a[i]\leqslant 100000, 1\leqslant b[i]\leqslant 100000" />。</p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3 1 5</span><br><span class="line">1 2 3</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">9</span><br></pre></td></tr></table></figure>
+
+<h3 id="样例解释"><a href="#样例解释" class="headerlink" title="样例解释"></a>样例解释</h3><p>(x) 代表面值为x的普通币，[x]代表面值为x的纪念币，样例所有方法数如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(1)(1)(1)(1)(1)</span><br><span class="line">(1)(1)(1)(2)</span><br><span class="line">(1)(1)(3)</span><br><span class="line">(1)(2)(2)</span><br><span class="line">(2)(3)</span><br><span class="line">(1)(1)(1)(1)[1]</span><br><span class="line">(1)(1)[1](2)</span><br><span class="line">(1)[1](3)</span><br><span class="line">[1](2)(2)</span><br></pre></td></tr></table></figure>
+
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>类似背包问题，前面<img src="https://latex.codecogs.com/svg.image?n_1" title="https://latex.codecogs.com/svg.image?n_1" />个物品每种可以选无限个，类似于<strong>完全背包</strong>，后面<img src="https://latex.codecogs.com/svg.image?n_2" title="https://latex.codecogs.com/svg.image?n_2" />个物品每种只能选一个，类似于<strong>01背包</strong>，这个问题本身是一个<strong>混合背包</strong>问题。</p>
 <ul>
-<li>分屏</li>
-<li>terminal连接断开之后，继续运行</li>
-</ul>
-<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="Session，Window，Pane"><a href="#Session，Window，Pane" class="headerlink" title="Session，Window，Pane"></a>Session，Window，Pane</h3><p>每个tmux可以开很多session，每个session可以开很多window，每个window可以开很多pane（每个pane会打开一个shell对话框）<br>Y总说他一般是用session和pane这两级（只开一个window）</p>
-<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><ol>
-<li><code>tmux</code>:新建一个session，其中包含一个window，window中包含一个pane，pane里打开了一个shell对话框。</li>
-<li><code>Ctrl + a</code>后手指松开，再按<code>%</code>将当前的pane左右半分成两个pane</li>
-<li><code>Ctrl + a</code>后手指松开，再按<code>“</code>将当前的pane上下半分成两个pane</li>
-<li>选中一个pane，按<code>Ctrl + d</code>可以关掉这个pane，如果当前window的所有pane均已关闭，则自动关闭window，如果当前session的所有window均已关闭，则自动关闭session。</li>
-<li>鼠标点击可以选择pane</li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按方向键，选择相邻的pane</li>
-<li>鼠标拖动pane之间的分割线，可以调整分割线的位置</li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按·<code>z</code>：·将当前pane全屏&#x2F;取消全屏</li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按<code>d</code>：挂起当前的session</li>
-<li>打开刚刚关闭的窗口<code>tmux a</code>或者<code>tmux attach</code></li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按<code>s</code>选择其他session<ul>
-<li>方向键——上：选择上一项，session&#x2F;window&#x2F;pane</li>
-<li>方向键——下：选择下一项：session&#x2F;window&#x2F;pane</li>
-<li>方向键——右：展开当前项 ：session&#x2F;window</li>
-<li>方向键——左：闭合当前项：session&#x2F;window</li>
+<li><p>状态表示：</p>
+<ul>
+<li><img src="https://latex.codecogs.com/svg.image?f[i,j]" title="https://latex.codecogs.com/svg.image?f[i,j]" />表示只从前i个硬币中选，且总面值是j的选法的集合。</li>
+<li>属性：选法的个数</li>
 </ul>
 </li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按<code>c</code>在当前session中创建一个新的window。</li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按<code>w</code>选择其他window，操作方法与11完全相同。</li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后翻阅<code>PageUp</code>：翻阅当前pane内的内容</li>
-<li>在tmux中选中文本时，需要按住<code>option</code>键<code>command + c</code>和<code>command + v</code>复制粘贴</li>
+<li><p>状态计算：把<img src="https://latex.codecogs.com/svg.image?f[i,j]" title="https://latex.codecogs.com/svg.image?f[i,j]" />分成<strong>不选硬币i</strong>和<strong>选硬币i</strong>两类。</p>
+<ul>
+<li>不选硬币i：<img src="https://latex.codecogs.com/svg.image?f[i-1,j]" title="https://latex.codecogs.com/svg.image?f[i-1,j]" /></li>
+<li>选硬币i：硬币i可能有两种情况（普通硬币和纪念币）<ol>
+<li>如果第i枚硬币是纪念币：<img src="https://latex.codecogs.com/svg.image?f[i,j]=f[i-1,j]&plus;f[i-1,j-p[i]]" title="https://latex.codecogs.com/svg.image?f[i,j]=f[i-1,j]+f[i-1,j-p[i]]" /></li>
+<li>如果第i枚硬币是普通硬币，则枚举的就不是是否选，而是选多少个。<img src="https://latex.codecogs.com/svg.image?f[i,j]=f[i-1,j]&plus;f[i-1,j-p[i]\times&space;1]&plus;f[i-1,j-p[i]\times&space;2]&space;...&space;" title="https://latex.codecogs.com/svg.image?f[i,j]=f[i-1,j]+f[i-1,j-p[i]\times 1]+f[i-1,j-p[i]\times 2] ... " />（完全背包问题）即<img src="https://latex.codecogs.com/svg.image?f[i,j]=f[i-1,j]&plus;f[i,j-p[i]]" title="https://latex.codecogs.com/svg.image?f[i,j]=f[i-1,j]+f[i,j-p[i]]" /></li>
 </ol>
-<h1 id="Vim：命令行模式下的文本编辑器"><a href="#Vim：命令行模式下的文本编辑器" class="headerlink" title="Vim：命令行模式下的文本编辑器"></a>Vim：命令行模式下的文本编辑器</h1><h2 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h2><ol>
-<li>命令行模式下的文本编辑器</li>
-<li>根据文件扩展名自动判别编程语言，支持代码缩进，代码高亮等功能。</li>
-<li>使用方式：vim filename；如果已有该文件，则打开它。如果没有该文件，则打开一个新的文件，并命名为filename</li>
-</ol>
-<h2 id="模式："><a href="#模式：" class="headerlink" title="模式："></a>模式：</h2><ol>
-<li>一般命令模式：默认模式。按不同的字符，即可进行不同的操作。可以复制，粘贴，删除文本等。</li>
-<li>编辑模式：在一般命令模式里按下i，会进入编辑模式，按下<code>esc</code>返回到一般命令模式</li>
-<li>命令行模式：在一般命令模式按下：？&#x2F;三个字母中的任意一个，会进入命令行模式。命令行在最下面。可以查找，替换，保存，出，配置编辑器等。</li>
-</ol>
-<h2 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h2><ol>
-<li><code>i</code>进入编辑模式</li>
-<li><code>Esc</code>进入一般命令模式</li>
-<li><code>h</code>或左箭头键，光标向左移动一个字符</li>
-<li><code>j</code>或下箭头键，光标向下移动一个字符</li>
-<li><code>k</code>或向上箭头，光标向上移动一个字符</li>
-<li><code>l</code>或向右箭头，光标向右移动一个字符</li>
-<li><code>n&lt;space&gt;</code>n表示数字，按下数字后再按空格，光标会向右移动这一行的n个字符</li>
-<li><code>0</code>或功能键<code>[Home]</code>，光标移动到本行开头</li>
-<li><code>$</code>或功能键<code>[End]</code>，光标移动到本行末尾</li>
-<li><code>G</code>光标移动到最后一行</li>
-<li><code>:n</code>或<code>nG</code>n为数字，光标移动到第n行</li>
-<li><code>gg</code>光标移动到第一行，相当于<code>1G</code></li>
-<li><code>n&lt;Enter&gt;</code>n为数字，光标向下移动n行</li>
-<li><code>/word</code>向光标之下寻找一个值为word的字符串</li>
-<li><code>?word</code>向光标之上寻找第一个值为word的字符串</li>
-<li><code>n</code>重复前一个查找操作</li>
-<li><code>N</code>反向重复前一个查找操作</li>
-<li><code>:n1,n2s/word1/word2/g</code>n1与n2为数字，在n1与n2之间寻找word1这个字符串，并将该字符串替换为word2</li>
-<li><code>:1,$s/word1/word2/g</code>将全文的word1替换为word2</li>
-<li><code>:1,$s/word1/word2/gc</code>将全文的word1替换为word2，并在替换前要求用户确认</li>
-<li><code>v</code>选中文本</li>
-<li><code>d</code>删除选中文本</li>
-<li><code>dd</code>删除当前行</li>
-<li><code>y</code>复制选中文字</li>
-<li><code>yy</code>复制当前行</li>
-<li><code>p</code>将复制的数据在光标的下一行粘贴</li>
-<li><code>u</code>撤销</li>
-<li><code>Ctrl + r</code>取消撤销</li>
-<li><code>Shift + &gt;</code>将选中的文本整体向右移动</li>
-<li><code>Shift  + &lt;</code>将选中的文本整体向左移动</li>
-<li><code>:w</code>保存</li>
-<li><code>:w!</code>强制保存</li>
-<li><code>:q</code>退出</li>
-<li><code>:q!</code>强制退出</li>
-<li><code>:wq</code>保存并退出</li>
-<li><code>:set paste</code>设置成粘贴模式，取消代码自动缩进</li>
-<li><code>:set no paste</code>取消粘贴模式，开启代码自动缩进</li>
-<li><code>:set nu</code>显示行号</li>
-<li><code>:set nonu</code>隐藏行号</li>
-<li><code>gg=G</code>将全文代码格式化</li>
-<li><code>gg + d + G</code>删除全文内容</li>
-<li><code>:noh</code>关闭查找关键词高亮</li>
-<li><code>Ctrl + q</code>当vim卡死时，可以取消当前在执行的命令</li>
-</ol>
-<h3 id="异常处理："><a href="#异常处理：" class="headerlink" title="异常处理："></a>异常处理：</h3><p>每次用vim编辑文件时，会自动创建一个<code>.filename.swp</code>的临时文件。<br>如果打开某一个文件时，该文件的swp文件已经存在，则会报错。此时解决办法有两种：</p>
-<ol>
-<li>找到正在打开该文件的程序，退出</li>
-<li>直接删掉该swp文件即可</li>
-</ol>
+</li>
+</ul>
+</li>
+<li><p>参考<a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/2/">01背包</a>和<a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/3/">完全背包</a></p>
+</li>
+</ul>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">100010</span>, MOD = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"><span class="type">int</span> n1, n2, m;</span><br><span class="line"><span class="type">int</span> f[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n1 &gt;&gt; n2 &gt;&gt; m;</span><br><span class="line">    f[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//普通币,完全背包</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n1; i ++) &#123;</span><br><span class="line">        <span class="type">int</span> p;</span><br><span class="line">        cin &gt;&gt; p;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = p; j &lt;= m; j ++)</span><br><span class="line">            f[j] = (f[j] + f[j - p]) % MOD;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//纪念币，01背包</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n2; i ++) &#123;</span><br><span class="line">        <span class="type">int</span> p;</span><br><span class="line">        cin &gt;&gt; p;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = m; j &gt;= p; j --)</span><br><span class="line">            f[j] = (f[j] + f[j - p]) % MOD;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    cout &lt;&lt; f[m] &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>原题链接：<a target="_blank" rel="noopener" href="https://www.acwing.com/activity/content/problem/content/1939/">AcWing.1939</a></p>
 
       
 
@@ -317,11 +298,19 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Linux基础</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">每日一题</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术学习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">动态规划</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">背包问题</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">今日头条笔试题</a>
         		</li>
       		
 		</ul>
@@ -333,7 +322,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/技术学习//" class="article-tag-list-link color5">技术学习</a>
+        			<a href="/categories/算法刷题//" class="article-tag-list-link color5">算法刷题</a>
         		</li>
       		
 		</ul>
@@ -388,7 +377,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yangtzuho.github.io/022/05/03/vim-tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yangtzuho.github.io/022/05/07/20220507%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -403,18 +392,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/05/03/zhiding/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Return Live And Learn;
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/05/02/%E7%A7%9F%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E9%85%8D%E7%8E%AF%E5%A2%83-%E5%AE%89%E8%A3%85Docker/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">租云服务器及配环境&amp;安装Docker</div>
+    <a href="/2022/05/06/20220506%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">每日一题——股票买卖 III</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -441,7 +421,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tmux"><span class="toc-number">1.</span> <span class="toc-text">Tmux</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Session%EF%BC%8CWindow%EF%BC%8CPane"><span class="toc-number">1.1.1.</span> <span class="toc-text">Session，Window，Pane</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C"><span class="toc-number">1.1.2.</span> <span class="toc-text">操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vim%EF%BC%9A%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text">Vim：命令行模式下的文本编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">功能：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%BC%8F%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">模式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%EF%BC%9A"><span class="toc-number">2.3.</span> <span class="toc-text">操作：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%EF%BC%9A"><span class="toc-number">2.3.1.</span> <span class="toc-text">异常处理：</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#2022-5-7"><span class="toc-number">1.</span> <span class="toc-text">2022.5.7</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-number"></span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number"></span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-number"></span> <span class="toc-text">输出格式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="toc-number">1.</span> <span class="toc-text">数据范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">输入样例：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">输出样例：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E4%BE%8B%E8%A7%A3%E9%87%8A"><span class="toc-number">4.</span> <span class="toc-text">样例解释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF%EF%BC%9A"><span class="toc-number"></span> <span class="toc-text">思路：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number"></span> <span class="toc-text">代码</span></a>
                     </div>
                 </span>
             </div>
