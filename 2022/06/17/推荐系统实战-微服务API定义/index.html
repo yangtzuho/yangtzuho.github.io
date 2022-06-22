@@ -6,36 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>每日一题——字符串哈希 | Hexo</title>
+  <title>推荐系统实战--微服务API定义 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2022.5.23字符串 哈希 算法基础 基础知识字符串哈希是算法基础中的一个模板问题，首先先对这个知识点做一个系统的梳理与讲解，然后再解决对应的题目。字符串哈希是一种特殊的哈希方式，也称为字符串前缀哈希，即要先对字符串的前缀进行预处理，例如对于字符串str &#x3D; &quot;ABCabcHazelYang&quot;，有  h[1] &#x3D; &quot;A&quot;的哈希值 h[2] &#x3D; &amp;quot">
+  <meta name="description" content="0. 概述在要实现的推荐系统中一共有4个微服务，其中3个为后端服务:  召回服务 排序服务 API服务  另外还有1个前端微服务负责提供网页相关的静态文件。 每个服务都是一个独立的python flask应用，对外暴露必要的接口。服务间互相通过HTTP调用通信，这样可以做到服务间互相独立，将整个系统各个组件之间的耦合度降低，从而增强系统的可维护性和可靠性。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="每日一题——字符串哈希">
-<meta property="og:url" content="http://example.com/2022/05/23/20220523/index.html">
+<meta property="og:title" content="推荐系统实战--微服务API定义">
+<meta property="og:url" content="http://example.com/2022/06/17/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98-%E5%BE%AE%E6%9C%8D%E5%8A%A1API%E5%AE%9A%E4%B9%89/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="2022.5.23字符串 哈希 算法基础 基础知识字符串哈希是算法基础中的一个模板问题，首先先对这个知识点做一个系统的梳理与讲解，然后再解决对应的题目。字符串哈希是一种特殊的哈希方式，也称为字符串前缀哈希，即要先对字符串的前缀进行预处理，例如对于字符串str &#x3D; &quot;ABCabcHazelYang&quot;，有  h[1] &#x3D; &quot;A&quot;的哈希值 h[2] &#x3D; &amp;quot">
+<meta property="og:description" content="0. 概述在要实现的推荐系统中一共有4个微服务，其中3个为后端服务:  召回服务 排序服务 API服务  另外还有1个前端微服务负责提供网页相关的静态文件。 每个服务都是一个独立的python flask应用，对外暴露必要的接口。服务间互相通过HTTP调用通信，这样可以做到服务间互相独立，将整个系统各个组件之间的耦合度降低，从而增强系统的可维护性和可靠性。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://latex.codecogs.com/svg.image?\left\{\begin{matrix}&space;&space;Q=2^{64}&space;\\p=131,13331\end{matrix}\right.">
-<meta property="og:image" content="https://i.imgtg.com/2022/05/23/hgXKK.png">
-<meta property="og:image" content="https://latex.codecogs.com/svg.image?n">
-<meta property="og:image" content="https://latex.codecogs.com/svg.image?m">
-<meta property="og:image" content="https://latex.codecogs.com/svg.image?l_1,r_1,l_2,r_2">
-<meta property="og:image" content="https://latex.codecogs.com/svg.image?[l_1,r_1]">
-<meta property="og:image" content="https://latex.codecogs.com/svg.image?[l_2,r_2]">
-<meta property="og:image" content="https://latex.codecogs.com/svg.image?n">
-<meta property="og:image" content="https://latex.codecogs.com/svg.image?m">
-<meta property="og:image" content="https://latex.codecogs.com/svg.image?n">
-<meta property="og:image" content="https://latex.codecogs.com/svg.image?m">
-<meta property="og:image" content="https://latex.codecogs.com/svg.image?l_1,r_1,l_2,r_2">
-<meta property="og:image" content="https://latex.codecogs.com/svg.image?1\leqslant&space;n,m\leqslant&space;10^5">
-<meta property="article:published_time" content="2022-05-23T14:48:28.000Z">
-<meta property="article:modified_time" content="2022-06-17T14:39:38.762Z">
+<meta property="article:published_time" content="2022-06-17T14:42:14.000Z">
+<meta property="article:modified_time" content="2022-06-17T14:43:49.031Z">
 <meta property="article:author" content="Hazel Yang">
-<meta property="article:tag" content="字符串">
-<meta property="article:tag" content="哈希">
-<meta property="article:tag" content="算法基础">
+<meta property="article:tag" content="推荐系统">
+<meta property="article:tag" content="项目实战">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://latex.codecogs.com/svg.image?\left\{\begin{matrix}&space;&space;Q=2^{64}&space;\\p=131,13331\end{matrix}\right.">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -184,20 +169,20 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-20220523" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-推荐系统实战-微服务API定义" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      每日一题——字符串哈希
+      推荐系统实战--微服务API定义
     </h1>
   
 
         
-        <a href="/2022/05/23/20220523/" class="archive-article-date">
-  	<time datetime="2022-05-23T14:48:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-23</time>
+        <a href="/2022/06/17/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98-%E5%BE%AE%E6%9C%8D%E5%8A%A1API%E5%AE%9A%E4%B9%89/" class="archive-article-date">
+  	<time datetime="2022-06-17T14:42:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-17</time>
 </a>
         
       </header>
@@ -207,58 +192,103 @@
 
 
       
-        <h3 id="2022-5-23"><a href="#2022-5-23" class="headerlink" title="2022.5.23"></a>2022.5.23</h3><p><code>字符串</code> <code>哈希</code> <code>算法基础</code></p>
-<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>字符串哈希是算法基础中的一个模板问题，首先先对这个知识点做一个系统的梳理与讲解，然后再解决对应的题目。<br><strong>字符串哈希</strong>是一种特殊的哈希方式，也称为<strong>字符串前缀哈希</strong>，即要先对字符串的前缀进行预处理，例如对于字符串<code>str = &quot;ABCabcHazelYang&quot;</code>，有</p>
-<ul>
-<li><code>h[1] = &quot;A&quot;的哈希值</code></li>
-<li><code>h[2] = &quot;AB&quot;的哈希值</code></li>
-<li><code>h[3] = &quot;ABC&quot;的哈希值</code></li>
-<li><code>h[4] = &quot;ABCa&quot;的哈希值</code></li>
-</ul>
-<p>…以此类推<br>其中特殊的有<code>h[0]=0的哈希值</code><br>那么有<strong>两个问题</strong>需要考虑：</p>
+        <h2 id="0-概述"><a href="#0-概述" class="headerlink" title="0. 概述"></a>0. 概述</h2><p>在要实现的推荐系统中一共有<strong>4个微服务</strong>，其中<strong>3个为后端服务</strong>:</p>
 <ol>
-<li>如何定义某个前缀的哈希值？</li>
-<li>如何处理哈希冲突？<span id="more"></span></li>
+<li>召回服务</li>
+<li>排序服务</li>
+<li>API服务</li>
 </ol>
+<p>另外还有<strong>1个前端微服务</strong>负责提供网页相关的静态文件。</p>
+<p>每个服务都是<strong>一个独立的python flask应用</strong>，对外暴露必要的接口。服务间互相通过<strong>HTTP调用通信</strong>，这样可以做到服务间互相独立，将整个系统各个组件之间的耦合度降低，从而增强系统的可维护性和可靠性。</p>
+<span id="more"></span>
+<h2 id="1-Recall-Service-召回"><a href="#1-Recall-Service-召回" class="headerlink" title="1. Recall Service: 召回"></a>1. Recall Service: 召回</h2><p>召回服务一共提供2个API，分别对应着“猜你喜欢”和“相似推荐”两种场景下的召回逻辑：</p>
+<h3 id="1-1-获取猜你喜欢召回结果"><a href="#1-1-获取猜你喜欢召回结果" class="headerlink" title="1.1 获取猜你喜欢召回结果"></a>1.1 获取猜你喜欢召回结果</h3><ul>
+<li><p><code>GET /recall</code></p>
+</li>
+<li><p>URL query参数：</p>
 <ul>
-<li><p>对于第一个问题，把字符串看成是一个<strong>p进制数</strong>，每一位字母则表示p进制数的每一位数字(ASCII码)，这样可以通过计算该p进制数的10进制数数值把某个特定的字符串转化为一个数字，转化为数字之后可能非常大，所以最后需要对整个数字进行取模，例如对Q进行取模，把该数映射到0<del>Q-1范围内的数。 **通过这种方式可以把任何一个字符串映射到&#96;0</del>Q-1&#96;之间的数**</p>
-</li>
-<li><p>对于如何处理冲突，采用经验值：</p>
-<img src="https://latex.codecogs.com/svg.image?\left\{\begin{matrix}&space;&space;Q=2^{64}&space;\\p=131,13331\end{matrix}\right." title="https://latex.codecogs.com/svg.image?\left\{\begin{matrix} Q=2^{64} \\p=131,13331\end{matrix}\right." />
-则在几乎所有情况下可以假定是不会出现冲突的。
-</li>
-<li><p>前缀哈希的作用：利用所预处理的前缀哈希，可以利用一个公式求得所有字符串子段的哈希值</p>
-</li>
+<li><code>user_id</code>: int类型，可为空。当前访问的用户id</li>
 </ul>
-<p><img src="https://i.imgtg.com/2022/05/23/hgXKK.png" alt="hgXKK.png"></p>
+</li>
+<li><p>返回值：</p>
 <ul>
-<li>直接用<code>unsigned long long</code>来存储所有的值，就不需要取模了，因为溢出就相当于取模。</li>
-<li>因此可以用O(1)的时间复杂度算出任意一个字段的哈希值</li>
+<li>类型：JSON数组</li>
+<li>召回的<strong>动漫id</strong>数组</li>
 </ul>
-<p><strong>那么字符串哈希有什么作用呢</strong><br>下面可以通过这道题来进行体会：</p>
-<hr>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定一个长度为 <img src="https://latex.codecogs.com/svg.image?n" title="https://latex.codecogs.com/svg.image?n" /> 的字符串，再给定 <img src="https://latex.codecogs.com/svg.image?m" title="https://latex.codecogs.com/svg.image?m" /> 个询问，每个询问包含四个整数 <img src="https://latex.codecogs.com/svg.image?l_1,r_1,l_2,r_2" title="https://latex.codecogs.com/svg.image?l_1,r_1,l_2,r_2" />，请你判断 <img src="https://latex.codecogs.com/svg.image?[l_1,r_1]" title="https://latex.codecogs.com/svg.image?[l_1,r_1]" /> 和<img src="https://latex.codecogs.com/svg.image?[l_2,r_2]" title="https://latex.codecogs.com/svg.image?[l_2,r_2]" /> 这两个区间所包含的字符串子串是否完全相同。</p>
-<p>字符串中只包含大小写英文字母和数字。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行包含整数 <img src="https://latex.codecogs.com/svg.image?n" title="https://latex.codecogs.com/svg.image?n" />  和 <img src="https://latex.codecogs.com/svg.image?m" title="https://latex.codecogs.com/svg.image?m" />，表示字符串长度和询问次数。</p>
-<p>第二行包含一个长度为 <img src="https://latex.codecogs.com/svg.image?n" title="https://latex.codecogs.com/svg.image?n" />  的字符串，字符串中只包含大小写英文字母和数字。</p>
-<p>接下来 <img src="https://latex.codecogs.com/svg.image?m" title="https://latex.codecogs.com/svg.image?m" /> 行，每行包含四个整数 <img src="https://latex.codecogs.com/svg.image?l_1,r_1,l_2,r_2" title="https://latex.codecogs.com/svg.image?l_1,r_1,l_2,r_2" />，表示一次询问所涉及的两个区间。</p>
-<p>注意，字符串的位置从 1 开始编号。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>对于每个询问输出一个结果，如果两个字符串子串完全相同则输出 <code>Yes</code>，否则输出 <code>No</code>。</p>
-<p>每个结果占一行。</p>
-<h3 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h3><img src="https://latex.codecogs.com/svg.image?1\leqslant&space;n,m\leqslant&space;10^5" title="https://latex.codecogs.com/svg.image?1\leqslant n,m\leqslant 10^5" />
-
-<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">8 3</span><br><span class="line">aabbaabb</span><br><span class="line">1 3 5 7</span><br><span class="line">1 3 6 8</span><br><span class="line">1 2 1 2</span><br></pre></td></tr></table></figure>
-
-<h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Yes</span><br><span class="line">No</span><br><span class="line">Yes</span><br></pre></td></tr></table></figure>
-
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ul>
-<li>首先把原字符串的所有前缀的哈希值求出来</li>
-<li>当想询问两个区间的时候，用字符串哈希的公示算出两个区间的字符串的哈希值</li>
-<li>如果两个哈希值相同的话，则表明这两个字符串相同，反之这两个字符串则不同</li>
+</li>
 </ul>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> ULL;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">100010</span>, P = <span class="number">131</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">char</span> str[N];</span><br><span class="line">ULL h[N], p[N];</span><br><span class="line"></span><br><span class="line"><span class="function">ULL <span class="title">get</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> h[r] - h[l - <span class="number">1</span>] * p[r - l + <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%s&quot;</span>, &amp;n, &amp;m, str + <span class="number">1</span>);</span><br><span class="line">    </span><br><span class="line">    p[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        p[i] = p[i - <span class="number">1</span>] * P;</span><br><span class="line">        h[i] = h[i - <span class="number">1</span>] * P + str[i];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> (m --)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> l1, r1, l2, r2;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d%d&quot;</span>, &amp;l1, &amp;r1, &amp;l2, &amp;r2);</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">get</span>(l1, r1) == <span class="built_in">get</span>(l2, r2)) <span class="built_in">puts</span>(<span class="string">&quot;Yes&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">&quot;No&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-获取相似推荐召回结果"><a href="#1-2-获取相似推荐召回结果" class="headerlink" title="1.2 获取相似推荐召回结果"></a>1.2 获取相似推荐召回结果</h3><ul>
+<li><p><code>GET /sim</code></p>
+</li>
+<li><p>URL query参数：</p>
+<ul>
+<li><code>anime_id</code>: int类型，不可为空。需要推荐的动漫id</li>
+</ul>
+</li>
+<li><p>返回值：</p>
+<ul>
+<li>类型：JSON数组</li>
+<li>召回的动漫id数组</li>
+</ul>
+</li>
+</ul>
+<p>由于目前还没有真正的实现召回逻辑，可以先返回一些假数据，方便后续接口调试。<br>参考以下代码:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, jsonify, request</span><br><span class="line"></span><br><span class="line">app = Flask(<span class="string">&#x27;recall-service&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&quot;/recall&quot;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_anime</span>():</span><br><span class="line">    user_id = request.args.get(<span class="string">&#x27;user_id&#x27;</span>, <span class="built_in">type</span>=<span class="built_in">int</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;Calling user <span class="subst">&#123;user_id&#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> jsonify([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&quot;/sim&quot;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_sim_anime</span>():</span><br><span class="line">    anime_id = request.args.get(<span class="string">&#x27;anime_id&#x27;</span>, <span class="built_in">type</span>=<span class="built_in">int</span>)</span><br><span class="line">    <span class="keyword">if</span> anime_id <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;bad anime id&#x27;</span>, <span class="number">400</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;Calling anime <span class="subst">&#123;anime_id&#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> jsonify([<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>原题链接：<a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/843/">AcWing841. 字符串哈希</a></p>
+<h2 id="2-Rank-Service-排序服务"><a href="#2-Rank-Service-排序服务" class="headerlink" title="2. Rank Service 排序服务"></a>2. Rank Service 排序服务</h2><p>排序服务提供1个API，对应“猜你喜欢”推荐场景。</p>
+<h3 id="2-1-获取猜你喜欢排序结果"><a href="#2-1-获取猜你喜欢排序结果" class="headerlink" title="2.1 获取猜你喜欢排序结果"></a>2.1 获取猜你喜欢排序结果</h3><ul>
+<li><code>GET /rank</code></li>
+<li>URL query参数：<ul>
+<li><code>user_id</code>: int类型，可为空。当前访问的用户id</li>
+</ul>
+</li>
+<li>返回值：<ul>
+<li>类型：JSON数组</li>
+<li>排序后的动漫id数组</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-API-Service-API服务"><a href="#3-API-Service-API服务" class="headerlink" title="3. API Service API服务"></a>3. API Service API服务</h2><p>召回和排序服务的接口我们都已经实现出来之后需要编写第三个业务服务：API Service。</p>
+<p>API服务所起到的功能是接受前端用户的请求，调用召回、排序服务相应接口获取推荐结果，然后组装数据，使其满足前端展示需要，最后返回结果。因此，首先要实现如下两个接口：</p>
+<h3 id="3-1-获取猜你喜欢结果"><a href="#3-1-获取猜你喜欢结果" class="headerlink" title="3.1 获取猜你喜欢结果"></a>3.1 获取猜你喜欢结果</h3><ul>
+<li><code>GET /recommends</code></li>
+<li>URL query参数：<br>* <code>user_id</code>: int类型，可为空。当前访问的用户id</li>
+<li>返回值：<ul>
+<li>类型：JSON数组</li>
+<li>推荐的<strong>动漫对象</strong>数组</li>
+</ul>
+</li>
+<li>应调用排序服务的rank接口</li>
+</ul>
+<h3 id="3-2-获取相似推荐结果"><a href="#3-2-获取相似推荐结果" class="headerlink" title="3.2 获取相似推荐结果"></a>3.2 获取相似推荐结果</h3><ul>
+<li><code>GET /sim</code></li>
+<li>URL query参数：<ul>
+<li>anime_id: int类型，不可为空。需要推荐的动漫id</li>
+</ul>
+</li>
+<li>返回值：<ul>
+<li>类型：JSON数组</li>
+<li>推荐的<strong>动漫对象</strong>数组</li>
+</ul>
+</li>
+<li>应调用召回层的<code>sim</code>接口（或自己实现的排序层相应接口）</li>
+</ul>
+<p>这里和之前有一点重要的区别，就是这两个API的返回值<strong>不再是动漫id数组了，而是动漫对象的数组</strong>。因为前端网页在给用户展示推荐结果的时候，显然不能只展示一堆id。因此API服务承担了将id转化为对象的职责。这个步骤一般会通过查数据库或缓存来完成。</p>
+<p>此外，由于前端页面在展示动漫的时候，会遇到展示一个动漫详情的需求（在动漫详情页中），因此我们还需要增加一个业务接口，为这个需求提供数据：</p>
+<h3 id="1-3-获取某个动漫详情"><a href="#1-3-获取某个动漫详情" class="headerlink" title="1.3 获取某个动漫详情"></a>1.3 获取某个动漫详情</h3><ul>
+<li><code>GET /anime/:id</code></li>
+<li>URL path参数：<ul>
+<li><code>id</code>: int类型，不可为空。需要查询的动漫id</li>
+</ul>
+</li>
+<li>返回值：<ul>
+<li>类型：JSON对象</li>
+<li>所查询的<strong>动漫对象</strong></li>
+</ul>
+</li>
+</ul>
+<p>类似的，先不用真正实现这个功能，仅需返回一个假数据，使得接口跑通即可。</p>
+<p>在有了以上3个微服务之后，已经初步完成了推荐系统的后端逻辑框架搭建，后面在此基础上一点点的去完善真正的推荐功能，最终实现一个完整的推荐系统。</p>
 
       
 
@@ -293,15 +323,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">字符串</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">推荐系统</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">哈希</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法基础</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目实战</a>
         		</li>
       		
 		</ul>
@@ -313,7 +339,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/算法刷题//" class="article-tag-list-link color5">算法刷题</a>
+        			<a href="/categories/技术学习//" class="article-tag-list-link color5">技术学习</a>
         		</li>
       		
 		</ul>
@@ -368,7 +394,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yangtzuho.github.io/022/05/23/20220523/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yangtzuho.github.io/022/06/17/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98-%E5%BE%AE%E6%9C%8D%E5%8A%A1API%E5%AE%9A%E4%B9%89/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -383,18 +409,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/05/23/%E4%BA%8C%E5%8F%89%E6%A0%91%E2%80%94%E2%80%94%E9%81%8D%E5%8E%86%E7%AF%87/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/06/17/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98-%E5%8F%AC%E5%9B%9E%E6%9C%8D%E5%8A%A1%EF%BC%881%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          二叉树——遍历篇
+          推荐系统实战--召回服务（1）
         
       </div>
     </a>
   
   
-    <a href="/2022/05/19/%E4%B8%80%E6%96%87%E8%A7%A3%E5%86%B3%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">一文解决买卖股票问题</div>
+    <a href="/2022/06/17/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98-%E6%95%B0%E6%8D%AE%E5%92%8C%E6%80%BB%E8%A7%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">推荐系统实战--数据和总览</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -421,7 +447,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#2022-5-23"><span class="toc-number">1.</span> <span class="toc-text">2022.5.23</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number"></span> <span class="toc-text">基础知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-number"></span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number"></span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-number"></span> <span class="toc-text">输出格式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4"><span class="toc-number">1.</span> <span class="toc-text">数据范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">输入样例：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">输出样例：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%9E%90"><span class="toc-number"></span> <span class="toc-text">分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number"></span> <span class="toc-text">代码</span></a>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">0. 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Recall-Service-%E5%8F%AC%E5%9B%9E"><span class="toc-number">2.</span> <span class="toc-text">1. Recall Service: 召回</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E8%8E%B7%E5%8F%96%E7%8C%9C%E4%BD%A0%E5%96%9C%E6%AC%A2%E5%8F%AC%E5%9B%9E%E7%BB%93%E6%9E%9C"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 获取猜你喜欢召回结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E8%8E%B7%E5%8F%96%E7%9B%B8%E4%BC%BC%E6%8E%A8%E8%8D%90%E5%8F%AC%E5%9B%9E%E7%BB%93%E6%9E%9C"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 获取相似推荐召回结果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Rank-Service-%E6%8E%92%E5%BA%8F%E6%9C%8D%E5%8A%A1"><span class="toc-number">3.</span> <span class="toc-text">2. Rank Service 排序服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E8%8E%B7%E5%8F%96%E7%8C%9C%E4%BD%A0%E5%96%9C%E6%AC%A2%E6%8E%92%E5%BA%8F%E7%BB%93%E6%9E%9C"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 获取猜你喜欢排序结果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-API-Service-API%E6%9C%8D%E5%8A%A1"><span class="toc-number">4.</span> <span class="toc-text">3. API Service API服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E8%8E%B7%E5%8F%96%E7%8C%9C%E4%BD%A0%E5%96%9C%E6%AC%A2%E7%BB%93%E6%9E%9C"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 获取猜你喜欢结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E8%8E%B7%E5%8F%96%E7%9B%B8%E4%BC%BC%E6%8E%A8%E8%8D%90%E7%BB%93%E6%9E%9C"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 获取相似推荐结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E8%8E%B7%E5%8F%96%E6%9F%90%E4%B8%AA%E5%8A%A8%E6%BC%AB%E8%AF%A6%E6%83%85"><span class="toc-number">4.3.</span> <span class="toc-text">1.3 获取某个动漫详情</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
