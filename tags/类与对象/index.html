@@ -6,22 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>vim&amp;tmux使用教程 | Hexo</title>
+  <title>Tag: 类与对象 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="vim和tmux是初学linux的必备工具，有很多命令刚开始学的时候很容易忘记，这篇文章总结了vim和tmux最常用的50个左右的命令，多用用就全部记住啦～熟练使用的唯一秘诀就是唯手熟尔～">
-<meta property="og:type" content="article">
-<meta property="og:title" content="vim&amp;tmux使用教程">
-<meta property="og:url" content="http://example.com/2022/05/03/vim-tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/tags/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="vim和tmux是初学linux的必备工具，有很多命令刚开始学的时候很容易忘记，这篇文章总结了vim和tmux最常用的50个左右的命令，多用用就全部记住啦～熟练使用的唯一秘诀就是唯手熟尔～">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-05-03T04:28:40.000Z">
-<meta property="article:modified_time" content="2022-05-09T14:23:57.112Z">
 <meta property="article:author" content="Hazel Yang">
-<meta property="article:tag" content="Linux">
-<meta property="article:tag" content="技术学习">
-<meta property="article:tag" content="vim">
-<meta property="article:tag" content="tmux">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -171,173 +163,51 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-vim-tmux使用教程" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 class="article-title" itemprop="name">
-      vim&amp;tmux使用教程
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2022" class="archive-year">2022</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/06/23/C-%E5%AD%A6%E4%B9%A0-%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%B1%BB/" class="archive-article-date">
+  	<time datetime="2022-06-22T19:23:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-23</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/06/23/C-%E5%AD%A6%E4%B9%A0-%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%B1%BB/">C++学习--实现一个简单的类</a>
     </h1>
   
 
-        
-        <a href="/2022/05/03/vim-tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2022-05-03T04:28:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-
-
-      
-        <p>vim和tmux是初学linux的必备工具，有很多命令刚开始学的时候很容易忘记，这篇文章总结了vim和tmux最常用的50个左右的命令，多用用就全部记住啦～熟练使用的唯一秘诀就是唯手熟尔～</p>
-<span id="more"></span>
-<h1 id="Tmux"><a href="#Tmux" class="headerlink" title="Tmux"></a>Tmux</h1><p><strong>Tmux的两个主要作用：</strong></p>
-<ul>
-<li>分屏</li>
-<li>terminal连接断开之后，继续运行</li>
-</ul>
-<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="Session，Window，Pane"><a href="#Session，Window，Pane" class="headerlink" title="Session，Window，Pane"></a>Session，Window，Pane</h3><p>每个tmux可以开很多session，每个session可以开很多window，每个window可以开很多pane（每个pane会打开一个shell对话框）<br>Y总说他一般是用session和pane这两级（只开一个window）</p>
-<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><ol>
-<li><code>tmux</code>:新建一个session，其中包含一个window，window中包含一个pane，pane里打开了一个shell对话框。</li>
-<li><code>Ctrl + a</code>后手指松开，再按<code>%</code>将当前的pane左右半分成两个pane</li>
-<li><code>Ctrl + a</code>后手指松开，再按<code>“</code>将当前的pane上下半分成两个pane</li>
-<li>选中一个pane，按<code>Ctrl + d</code>可以关掉这个pane，如果当前window的所有pane均已关闭，则自动关闭window，如果当前session的所有window均已关闭，则自动关闭session。</li>
-<li>鼠标点击可以选择pane</li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按方向键，选择相邻的pane</li>
-<li>鼠标拖动pane之间的分割线，可以调整分割线的位置</li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按·<code>z</code>：·将当前pane全屏&#x2F;取消全屏</li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按<code>d</code>：挂起当前的session</li>
-<li>打开刚刚关闭的窗口<code>tmux a</code>或者<code>tmux attach</code></li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按<code>s</code>选择其他session<ul>
-<li>方向键——上：选择上一项，session&#x2F;window&#x2F;pane</li>
-<li>方向键——下：选择下一项：session&#x2F;window&#x2F;pane</li>
-<li>方向键——右：展开当前项 ：session&#x2F;window</li>
-<li>方向键——左：闭合当前项：session&#x2F;window</li>
-</ul>
-</li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按<code>c</code>在当前session中创建一个新的window。</li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按<code>w</code>选择其他window，操作方法与11完全相同。</li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后翻阅<code>PageUp</code>：翻阅当前pane内的内容</li>
-<li>在tmux中选中文本时，需要按住<code>option</code>键<code>command + c</code>和<code>command + v</code>复制粘贴</li>
-</ol>
-<h1 id="Vim：命令行模式下的文本编辑器"><a href="#Vim：命令行模式下的文本编辑器" class="headerlink" title="Vim：命令行模式下的文本编辑器"></a>Vim：命令行模式下的文本编辑器</h1><h2 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h2><ol>
-<li>命令行模式下的文本编辑器</li>
-<li>根据文件扩展名自动判别编程语言，支持代码缩进，代码高亮等功能。</li>
-<li>使用方式：vim filename；如果已有该文件，则打开它。如果没有该文件，则打开一个新的文件，并命名为filename</li>
-</ol>
-<h2 id="模式："><a href="#模式：" class="headerlink" title="模式："></a>模式：</h2><ol>
-<li>一般命令模式：默认模式。按不同的字符，即可进行不同的操作。可以复制，粘贴，删除文本等。</li>
-<li>编辑模式：在一般命令模式里按下i，会进入编辑模式，按下<code>esc</code>返回到一般命令模式</li>
-<li>命令行模式：在一般命令模式按下：？&#x2F;三个字母中的任意一个，会进入命令行模式。命令行在最下面。可以查找，替换，保存，出，配置编辑器等。</li>
-</ol>
-<h2 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h2><ol>
-<li><code>i</code>进入编辑模式</li>
-<li><code>Esc</code>进入一般命令模式</li>
-<li><code>h</code>或左箭头键，光标向左移动一个字符</li>
-<li><code>j</code>或下箭头键，光标向下移动一个字符</li>
-<li><code>k</code>或向上箭头，光标向上移动一个字符</li>
-<li><code>l</code>或向右箭头，光标向右移动一个字符</li>
-<li><code>n&lt;space&gt;</code>n表示数字，按下数字后再按空格，光标会向右移动这一行的n个字符</li>
-<li><code>0</code>或功能键<code>[Home]</code>，光标移动到本行开头</li>
-<li><code>$</code>或功能键<code>[End]</code>，光标移动到本行末尾</li>
-<li><code>G</code>光标移动到最后一行</li>
-<li><code>:n</code>或<code>nG</code>n为数字，光标移动到第n行</li>
-<li><code>gg</code>光标移动到第一行，相当于<code>1G</code></li>
-<li><code>n&lt;Enter&gt;</code>n为数字，光标向下移动n行</li>
-<li><code>/word</code>向光标之下寻找一个值为word的字符串</li>
-<li><code>?word</code>向光标之上寻找第一个值为word的字符串</li>
-<li><code>n</code>重复前一个查找操作</li>
-<li><code>N</code>反向重复前一个查找操作</li>
-<li><code>:n1,n2s/word1/word2/g</code>n1与n2为数字，在n1与n2之间寻找word1这个字符串，并将该字符串替换为word2</li>
-<li><code>:1,$s/word1/word2/g</code>将全文的word1替换为word2</li>
-<li><code>:1,$s/word1/word2/gc</code>将全文的word1替换为word2，并在替换前要求用户确认</li>
-<li><code>v</code>选中文本</li>
-<li><code>d</code>删除选中文本</li>
-<li><code>dd</code>删除当前行</li>
-<li><code>y</code>复制选中文字</li>
-<li><code>yy</code>复制当前行</li>
-<li><code>p</code>将复制的数据在光标的下一行粘贴</li>
-<li><code>u</code>撤销</li>
-<li><code>Ctrl + r</code>取消撤销</li>
-<li><code>Shift + &gt;</code>将选中的文本整体向右移动</li>
-<li><code>Shift  + &lt;</code>将选中的文本整体向左移动</li>
-<li><code>:w</code>保存</li>
-<li><code>:w!</code>强制保存</li>
-<li><code>:q</code>退出</li>
-<li><code>:q!</code>强制退出</li>
-<li><code>:wq</code>保存并退出</li>
-<li><code>:set paste</code>设置成粘贴模式，取消代码自动缩进</li>
-<li><code>:set no paste</code>取消粘贴模式，开启代码自动缩进</li>
-<li><code>:set nu</code>显示行号</li>
-<li><code>:set nonu</code>隐藏行号</li>
-<li><code>gg=G</code>将全文代码格式化</li>
-<li><code>gg + d + G</code>删除全文内容</li>
-<li><code>:noh</code>关闭查找关键词高亮</li>
-<li><code>Ctrl + q</code>当vim卡死时，可以取消当前在执行的命令</li>
-</ol>
-<h3 id="异常处理："><a href="#异常处理：" class="headerlink" title="异常处理："></a>异常处理：</h3><p>每次用vim编辑文件时，会自动创建一个<code>.filename.swp</code>的临时文件。<br>如果打开某一个文件时，该文件的swp文件已经存在，则会报错。此时解决办法有两种：</p>
-<ol>
-<li>找到正在打开该文件的程序，退出</li>
-<li>直接删掉该swp文件即可</li>
-</ol>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C++学习</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vim</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tmux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">类与对象</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -350,128 +220,17 @@
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yangtzuho.github.io/022/05/03/vim-tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2022/05/03/zhiding/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Return Live And Learn;
-        
-      </div>
-    </a>
   
   
-    <a href="/2022/05/02/%E7%A7%9F%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E9%85%8D%E7%8E%AF%E5%A2%83-%E5%AE%89%E8%A3%85Docker/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">租云服务器及配环境&amp;安装Docker</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tmux"><span class="toc-number">1.</span> <span class="toc-text">Tmux</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Session%EF%BC%8CWindow%EF%BC%8CPane"><span class="toc-number">1.1.1.</span> <span class="toc-text">Session，Window，Pane</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C"><span class="toc-number">1.1.2.</span> <span class="toc-text">操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vim%EF%BC%9A%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text">Vim：命令行模式下的文本编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">功能：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%BC%8F%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">模式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%EF%BC%9A"><span class="toc-number">2.3.</span> <span class="toc-text">操作：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%EF%BC%9A"><span class="toc-number">2.3.1.</span> <span class="toc-text">异常处理：</span></a></li></ol></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
-
+    
 
 
           </div>
@@ -494,9 +253,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

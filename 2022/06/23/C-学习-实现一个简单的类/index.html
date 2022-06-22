@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>vim&amp;tmux使用教程 | Hexo</title>
+  <title>C++学习--实现一个简单的类 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="vim和tmux是初学linux的必备工具，有很多命令刚开始学的时候很容易忘记，这篇文章总结了vim和tmux最常用的50个左右的命令，多用用就全部记住啦～熟练使用的唯一秘诀就是唯手熟尔～">
+  <meta name="description" content="学习C++ Prime Plus第十章类与对象的第一小节，要写一个类要分成三个部分：  .h 放类的声明 .cpp 文件放类的定义 .cpp 文件使用这个类   注意： 通常将接口（类的定义）放在头文件中 将实现类方法的代码放在源代码文件中 类名首字母大写">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim&amp;tmux使用教程">
-<meta property="og:url" content="http://example.com/2022/05/03/vim-tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:title" content="C++学习--实现一个简单的类">
+<meta property="og:url" content="http://example.com/2022/06/23/C-%E5%AD%A6%E4%B9%A0-%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%B1%BB/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="vim和tmux是初学linux的必备工具，有很多命令刚开始学的时候很容易忘记，这篇文章总结了vim和tmux最常用的50个左右的命令，多用用就全部记住啦～熟练使用的唯一秘诀就是唯手熟尔～">
+<meta property="og:description" content="学习C++ Prime Plus第十章类与对象的第一小节，要写一个类要分成三个部分：  .h 放类的声明 .cpp 文件放类的定义 .cpp 文件使用这个类   注意： 通常将接口（类的定义）放在头文件中 将实现类方法的代码放在源代码文件中 类名首字母大写">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-05-03T04:28:40.000Z">
-<meta property="article:modified_time" content="2022-05-09T14:23:57.112Z">
+<meta property="article:published_time" content="2022-06-22T19:23:29.000Z">
+<meta property="article:modified_time" content="2022-06-22T19:33:58.376Z">
 <meta property="article:author" content="Hazel Yang">
-<meta property="article:tag" content="Linux">
-<meta property="article:tag" content="技术学习">
-<meta property="article:tag" content="vim">
-<meta property="article:tag" content="tmux">
+<meta property="article:tag" content="C++学习">
+<meta property="article:tag" content="类与对象">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -171,20 +169,20 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-vim-tmux使用教程" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-C-学习-实现一个简单的类" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      vim&amp;tmux使用教程
+      C++学习--实现一个简单的类
     </h1>
   
 
         
-        <a href="/2022/05/03/vim-tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2022-05-03T04:28:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-03</time>
+        <a href="/2022/06/23/C-%E5%AD%A6%E4%B9%A0-%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%B1%BB/" class="archive-article-date">
+  	<time datetime="2022-06-22T19:23:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-23</time>
 </a>
         
       </header>
@@ -194,97 +192,80 @@
 
 
       
-        <p>vim和tmux是初学linux的必备工具，有很多命令刚开始学的时候很容易忘记，这篇文章总结了vim和tmux最常用的50个左右的命令，多用用就全部记住啦～熟练使用的唯一秘诀就是唯手熟尔～</p>
-<span id="more"></span>
-<h1 id="Tmux"><a href="#Tmux" class="headerlink" title="Tmux"></a>Tmux</h1><p><strong>Tmux的两个主要作用：</strong></p>
+        <p>学习C++ Prime Plus第十章类与对象的第一小节，要写一个类要分成三个部分：</p>
+<ol>
+<li>.h 放类的声明</li>
+<li>.cpp 文件放类的定义</li>
+<li>.cpp 文件使用这个类</li>
+</ol>
 <ul>
-<li>分屏</li>
-<li>terminal连接断开之后，继续运行</li>
-</ul>
-<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="Session，Window，Pane"><a href="#Session，Window，Pane" class="headerlink" title="Session，Window，Pane"></a>Session，Window，Pane</h3><p>每个tmux可以开很多session，每个session可以开很多window，每个window可以开很多pane（每个pane会打开一个shell对话框）<br>Y总说他一般是用session和pane这两级（只开一个window）</p>
-<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><ol>
-<li><code>tmux</code>:新建一个session，其中包含一个window，window中包含一个pane，pane里打开了一个shell对话框。</li>
-<li><code>Ctrl + a</code>后手指松开，再按<code>%</code>将当前的pane左右半分成两个pane</li>
-<li><code>Ctrl + a</code>后手指松开，再按<code>“</code>将当前的pane上下半分成两个pane</li>
-<li>选中一个pane，按<code>Ctrl + d</code>可以关掉这个pane，如果当前window的所有pane均已关闭，则自动关闭window，如果当前session的所有window均已关闭，则自动关闭session。</li>
-<li>鼠标点击可以选择pane</li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按方向键，选择相邻的pane</li>
-<li>鼠标拖动pane之间的分割线，可以调整分割线的位置</li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按·<code>z</code>：·将当前pane全屏&#x2F;取消全屏</li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按<code>d</code>：挂起当前的session</li>
-<li>打开刚刚关闭的窗口<code>tmux a</code>或者<code>tmux attach</code></li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按<code>s</code>选择其他session<ul>
-<li>方向键——上：选择上一项，session&#x2F;window&#x2F;pane</li>
-<li>方向键——下：选择下一项：session&#x2F;window&#x2F;pane</li>
-<li>方向键——右：展开当前项 ：session&#x2F;window</li>
-<li>方向键——左：闭合当前项：session&#x2F;window</li>
+<li>注意：<ul>
+<li>通常将接口（类的定义）放在<strong>头文件</strong>中</li>
+<li>将实现类方法的代码放在<strong>源代码文件</strong>中</li>
+<li>类名首字母大写</li>
 </ul>
 </li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按<code>c</code>在当前session中创建一个新的window。</li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后按<code>w</code>选择其他window，操作方法与11完全相同。</li>
-<li>按下<code>Ctrl + a</code>后手指松开，然后翻阅<code>PageUp</code>：翻阅当前pane内的内容</li>
-<li>在tmux中选中文本时，需要按住<code>option</code>键<code>command + c</code>和<code>command + v</code>复制粘贴</li>
-</ol>
-<h1 id="Vim：命令行模式下的文本编辑器"><a href="#Vim：命令行模式下的文本编辑器" class="headerlink" title="Vim：命令行模式下的文本编辑器"></a>Vim：命令行模式下的文本编辑器</h1><h2 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h2><ol>
-<li>命令行模式下的文本编辑器</li>
-<li>根据文件扩展名自动判别编程语言，支持代码缩进，代码高亮等功能。</li>
-<li>使用方式：vim filename；如果已有该文件，则打开它。如果没有该文件，则打开一个新的文件，并命名为filename</li>
-</ol>
-<h2 id="模式："><a href="#模式：" class="headerlink" title="模式："></a>模式：</h2><ol>
-<li>一般命令模式：默认模式。按不同的字符，即可进行不同的操作。可以复制，粘贴，删除文本等。</li>
-<li>编辑模式：在一般命令模式里按下i，会进入编辑模式，按下<code>esc</code>返回到一般命令模式</li>
-<li>命令行模式：在一般命令模式按下：？&#x2F;三个字母中的任意一个，会进入命令行模式。命令行在最下面。可以查找，替换，保存，出，配置编辑器等。</li>
-</ol>
-<h2 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h2><ol>
-<li><code>i</code>进入编辑模式</li>
-<li><code>Esc</code>进入一般命令模式</li>
-<li><code>h</code>或左箭头键，光标向左移动一个字符</li>
-<li><code>j</code>或下箭头键，光标向下移动一个字符</li>
-<li><code>k</code>或向上箭头，光标向上移动一个字符</li>
-<li><code>l</code>或向右箭头，光标向右移动一个字符</li>
-<li><code>n&lt;space&gt;</code>n表示数字，按下数字后再按空格，光标会向右移动这一行的n个字符</li>
-<li><code>0</code>或功能键<code>[Home]</code>，光标移动到本行开头</li>
-<li><code>$</code>或功能键<code>[End]</code>，光标移动到本行末尾</li>
-<li><code>G</code>光标移动到最后一行</li>
-<li><code>:n</code>或<code>nG</code>n为数字，光标移动到第n行</li>
-<li><code>gg</code>光标移动到第一行，相当于<code>1G</code></li>
-<li><code>n&lt;Enter&gt;</code>n为数字，光标向下移动n行</li>
-<li><code>/word</code>向光标之下寻找一个值为word的字符串</li>
-<li><code>?word</code>向光标之上寻找第一个值为word的字符串</li>
-<li><code>n</code>重复前一个查找操作</li>
-<li><code>N</code>反向重复前一个查找操作</li>
-<li><code>:n1,n2s/word1/word2/g</code>n1与n2为数字，在n1与n2之间寻找word1这个字符串，并将该字符串替换为word2</li>
-<li><code>:1,$s/word1/word2/g</code>将全文的word1替换为word2</li>
-<li><code>:1,$s/word1/word2/gc</code>将全文的word1替换为word2，并在替换前要求用户确认</li>
-<li><code>v</code>选中文本</li>
-<li><code>d</code>删除选中文本</li>
-<li><code>dd</code>删除当前行</li>
-<li><code>y</code>复制选中文字</li>
-<li><code>yy</code>复制当前行</li>
-<li><code>p</code>将复制的数据在光标的下一行粘贴</li>
-<li><code>u</code>撤销</li>
-<li><code>Ctrl + r</code>取消撤销</li>
-<li><code>Shift + &gt;</code>将选中的文本整体向右移动</li>
-<li><code>Shift  + &lt;</code>将选中的文本整体向左移动</li>
-<li><code>:w</code>保存</li>
-<li><code>:w!</code>强制保存</li>
-<li><code>:q</code>退出</li>
-<li><code>:q!</code>强制退出</li>
-<li><code>:wq</code>保存并退出</li>
-<li><code>:set paste</code>设置成粘贴模式，取消代码自动缩进</li>
-<li><code>:set no paste</code>取消粘贴模式，开启代码自动缩进</li>
-<li><code>:set nu</code>显示行号</li>
-<li><code>:set nonu</code>隐藏行号</li>
-<li><code>gg=G</code>将全文代码格式化</li>
-<li><code>gg + d + G</code>删除全文内容</li>
-<li><code>:noh</code>关闭查找关键词高亮</li>
-<li><code>Ctrl + q</code>当vim卡死时，可以取消当前在执行的命令</li>
-</ol>
-<h3 id="异常处理："><a href="#异常处理：" class="headerlink" title="异常处理："></a>异常处理：</h3><p>每次用vim编辑文件时，会自动创建一个<code>.filename.swp</code>的临时文件。<br>如果打开某一个文件时，该文件的swp文件已经存在，则会报错。此时解决办法有两种：</p>
-<ol>
-<li>找到正在打开该文件的程序，退出</li>
-<li>直接删掉该swp文件即可</li>
-</ol>
+</ul>
+<span id="more"></span>
+
+<h2 id="1-头文件-h"><a href="#1-头文件-h" class="headerlink" title="1. 头文件.h"></a>1. 头文件.h</h2><ul>
+<li>不能直接访问private中的属性和方法，要通过public访问</li>
+<li>通过类的对象访问成员变量和成员函数</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> __STOCK00__H__</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span>  __STOCK00__H_</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Stock</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">        std:: string company;</span><br><span class="line">        <span class="type">long</span> shares;</span><br><span class="line">        <span class="type">double</span> share_val;</span><br><span class="line">        <span class="type">double</span> total_val;</span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">set_tot</span><span class="params">()</span></span>&#123;total_val = shares * share_val;&#125;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">acquire</span><span class="params">(<span class="type">const</span> std::string &amp;co, <span class="type">long</span> n, <span class="type">double</span> pr)</span></span>;</span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">buy</span><span class="params">(<span class="type">long</span> num, <span class="type">double</span> price)</span></span>;</span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">sell</span><span class="params">(<span class="type">long</span> num, <span class="type">double</span> price)</span></span>;</span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">update</span><span class="params">(<span class="type">double</span> price)</span></span>;</span><br><span class="line">        <span class="function"><span class="type">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>控制类成员分访问：</p>
+<ul>
+<li>由于隐藏数据是OOP的主要目的之一，数据项通常放在私有部分</li>
+<li>组成类接口的成员函数通常放在公有部分</li>
+<li>成员函数也可以放在私有部分，不能直接从程序中调用这些函数，但是公有方法却可以使用它们。</li>
+<li>通常使用私有函数实现不属于公有借口的实现细节</li>
+</ul>
+</li>
+<li><p>不必在类声明中使用关键字private，因为这是类对象的默认访问控制（结构体中数据默认public）</p>
+</li>
+</ul>
+<h2 id="2-实现类成员函数–-cpp文件"><a href="#2-实现类成员函数–-cpp文件" class="headerlink" title="2. 实现类成员函数–.cpp文件"></a>2. 实现类成员函数–.cpp文件</h2><ul>
+<li>定义成员函数时，使用作用域解析运算符(::)来标识函数所属的类</li>
+<li>类的成员函数可以访问类的private组件</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Stock::update</span><span class="params">(<span class="type">double</span> price)</span></span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>则另一个类的成员函数名也可以为update</li>
+<li>其定义位于类声明中的函数都将<strong>自动成为内联函数</strong>，因此<code>Stock::set_tot()</code>是内联函数；</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stock00.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Stock::acquire</span><span class="params">(<span class="type">const</span> std::string&amp; co, <span class="type">long</span> n, <span class="type">double</span> pr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    company = co;</span><br><span class="line">    <span class="keyword">if</span> (n &lt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;Number of shares cannot be native &quot;</span> &lt;&lt; company &lt;&lt; <span class="string">&quot;s hares set to be 0&quot;</span>;</span><br><span class="line">        shares = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> shares = n;</span><br><span class="line">    share_val = pr;</span><br><span class="line">    <span class="built_in">set_tot</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Stock::buy</span><span class="params">(<span class="type">long</span> num, <span class="type">double</span> price)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (num &lt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;The Transaction is aborded&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        shares += num;</span><br><span class="line">        share_val = price;</span><br><span class="line">        <span class="built_in">set_tot</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Stock::sell</span><span class="params">(<span class="type">long</span> num, <span class="type">double</span> price)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (num &lt; <span class="number">0</span> ) std::cout &lt;&lt; <span class="string">&quot;The num cannot be negitive, the transaction is aborded&quot;</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (num &gt; shares) std::cout &lt;&lt; <span class="string">&quot;You cannot sell more than you have, the transaction is aborded&quot;</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        shares -= num;</span><br><span class="line">        share_val = price;</span><br><span class="line">        <span class="built_in">set_tot</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Stock::update</span><span class="params">(<span class="type">double</span> price)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    share_val = price;</span><br><span class="line">    <span class="built_in">set_tot</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Stock::show</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Compang: &quot;</span> &lt;&lt; company &lt;&lt; std::endl;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Shares: &quot;</span> &lt;&lt; shares &lt;&lt; std::endl;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Share Value: &quot;</span> &lt;&lt; share_val &lt;&lt; std::endl;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Total Value: &quot;</span> &lt;&lt; total_val &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>也可以在类声明之外定义成员函数，使之成为内联函数（<code>inline</code>）</li>
+</ul>
+<h2 id="3-使用类–-cpp"><a href="#3-使用类–-cpp" class="headerlink" title="3. 使用类–.cpp"></a>3. 使用类–.cpp</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stock00.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Stock fluffy_the_cat;</span><br><span class="line">    fluffy_the_cat.<span class="built_in">acquire</span>(<span class="string">&quot;Nanosmart&quot;</span>, <span class="number">20</span>, <span class="number">12.50</span>);</span><br><span class="line">    fluffy_the_cat.<span class="built_in">show</span>();</span><br><span class="line">    fluffy_the_cat.<span class="built_in">buy</span>(<span class="number">15</span>, <span class="number">18.125</span>);</span><br><span class="line">    fluffy_the_cat.<span class="built_in">show</span>();</span><br><span class="line">    fluffy_the_cat.<span class="built_in">sell</span>(<span class="number">200</span>, <span class="number">20</span>);</span><br><span class="line">    fluffy_the_cat.<span class="built_in">show</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>要使用新类型，最关键的是了解成员函数的功能，而不必考虑其实现细节</p>
+</li>
+<li><p>客户&#x2F;服务器模型</p>
+<ul>
+<li>客户是使用类的程序，类声明（包括类方法）构成了服务器</li>
+<li>客户程序员唯一的责任是了解接口，服务器设计者确保服务器根据该接口可靠并准确执行。</li>
+</ul>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><strong>指定类设计的步骤</strong></p>
+<ul>
+<li><p>提供类的声明：数据成员和函数成员</p>
+<ul>
+<li>私有部分：数据成员–保护数据的完整性</li>
+<li>共有部分：成员函数–公有接口</li>
+<li>C++通过类实现抽象，数据隐藏和封装等OOP特性很容易</li>
+</ul>
+</li>
+<li><p>实现类成员函数</p>
+</li>
+<li><p>通过对象调用类里面的方法</p>
+</li>
+</ul>
 
       
 
@@ -319,19 +300,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C++学习</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vim</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tmux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">类与对象</a>
         		</li>
       		
 		</ul>
@@ -398,7 +371,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yangtzuho.github.io/022/05/03/vim-tmux%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yangtzuho.github.io/022/06/23/C-%E5%AD%A6%E4%B9%A0-%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%B1%BB/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -413,18 +386,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/05/03/zhiding/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Return Live And Learn;
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/05/02/%E7%A7%9F%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E9%85%8D%E7%8E%AF%E5%A2%83-%E5%AE%89%E8%A3%85Docker/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">租云服务器及配环境&amp;安装Docker</div>
+    <a href="/2022/06/17/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98-%E5%8F%AC%E5%9B%9E%E6%9C%8D%E5%8A%A1%EF%BC%881%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">推荐系统实战--召回服务（1）</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -451,7 +415,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tmux"><span class="toc-number">1.</span> <span class="toc-text">Tmux</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Session%EF%BC%8CWindow%EF%BC%8CPane"><span class="toc-number">1.1.1.</span> <span class="toc-text">Session，Window，Pane</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C"><span class="toc-number">1.1.2.</span> <span class="toc-text">操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vim%EF%BC%9A%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text">Vim：命令行模式下的文本编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">功能：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%BC%8F%EF%BC%9A"><span class="toc-number">2.2.</span> <span class="toc-text">模式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%EF%BC%9A"><span class="toc-number">2.3.</span> <span class="toc-text">操作：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%EF%BC%9A"><span class="toc-number">2.3.1.</span> <span class="toc-text">异常处理：</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%A4%B4%E6%96%87%E4%BB%B6-h"><span class="toc-number">1.</span> <span class="toc-text">1. 头文件.h</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%9E%E7%8E%B0%E7%B1%BB%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E2%80%93-cpp%E6%96%87%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">2. 实现类成员函数–.cpp文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8%E7%B1%BB%E2%80%93-cpp"><span class="toc-number">3.</span> <span class="toc-text">3. 使用类–.cpp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
                     </div>
                 </span>
             </div>
