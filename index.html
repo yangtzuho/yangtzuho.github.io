@@ -249,6 +249,107 @@
 
 
   
+    <article id="post-Python时间戳转指定日期格式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/06/29/Python%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8C%87%E5%AE%9A%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F/">Python时间戳转指定日期格式</a>
+    </h1>
+  
+
+        
+        <a href="/2022/06/29/Python%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8C%87%E5%AE%9A%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2022-06-29T03:03:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+        <h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>所需参数的返回参数格式是时间戳，所以需要进行格式转换。</p>
+<h2 id="1-当前时间戳"><a href="#1-当前时间戳" class="headerlink" title="1. 当前时间戳"></a>1. 当前时间戳</h2><h3 id="实例1"><a href="#实例1" class="headerlink" title="实例1"></a>实例1</h3><p>使用 <code>time</code> 库。</p>
+<ul>
+<li>代码<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="comment"># 获得当前时间时间戳</span></span><br><span class="line">now = <span class="built_in">int</span>(time.time())</span><br><span class="line"><span class="built_in">print</span>(now)</span><br><span class="line"></span><br><span class="line"><span class="comment">#转换为其他日期格式,如:&quot;%Y-%m-%d %H:%M:%S&quot;</span></span><br><span class="line">timeArray = time.localtime(now)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;timeArray: <span class="subst">&#123;timeArray&#125;</span>&quot;</span>)</span><br><span class="line">otherStyleTime = time.strftime(<span class="string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>, timeArray)</span><br><span class="line"><span class="built_in">print</span>(otherStyleTime)</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2022/06/29/Python%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8C%87%E5%AE%9A%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">时间戳</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">datetime</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/技术学习//" class="article-tag-list-link color5">技术学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/06/29/Python%E6%97%B6%E9%97%B4%E6%88%B3%E8%BD%AC%E6%8C%87%E5%AE%9A%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-简单关键词检索的实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1097,107 +1198,6 @@
 
 
   
-    <article id="post-推荐系统实战-微服务API定义" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/06/17/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98-%E5%BE%AE%E6%9C%8D%E5%8A%A1API%E5%AE%9A%E4%B9%89/">推荐系统实战--微服务API定义</a>
-    </h1>
-  
-
-        
-        <a href="/2022/06/17/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98-%E5%BE%AE%E6%9C%8D%E5%8A%A1API%E5%AE%9A%E4%B9%89/" class="archive-article-date">
-  	<time datetime="2022-06-17T14:42:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-
-
-      
-        <h2 id="0-概述"><a href="#0-概述" class="headerlink" title="0. 概述"></a>0. 概述</h2><p>在要实现的推荐系统中一共有<strong>4个微服务</strong>，其中<strong>3个为后端服务</strong>:</p>
-<ol>
-<li>召回服务</li>
-<li>排序服务</li>
-<li>API服务</li>
-</ol>
-<p>另外还有<strong>1个前端微服务</strong>负责提供网页相关的静态文件。</p>
-<p>每个服务都是<strong>一个独立的python flask应用</strong>，对外暴露必要的接口。服务间互相通过<strong>HTTP调用通信</strong>，这样可以做到服务间互相独立，将整个系统各个组件之间的耦合度降低，从而增强系统的可维护性和可靠性。</p>
-        
-          <a class="article-more-a" href="/2022/06/17/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98-%E5%BE%AE%E6%9C%8D%E5%8A%A1API%E5%AE%9A%E4%B9%89/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">推荐系统</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目实战</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术学习//" class="article-tag-list-link color5">技术学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/06/17/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98-%E5%BE%AE%E6%9C%8D%E5%8A%A1API%E5%AE%9A%E4%B9%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1295,6 +1295,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">队列</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">模拟</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">约瑟夫环问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">每日一题</a>
               </li>
              
@@ -1311,27 +1323,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">队列</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">模拟</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">约瑟夫环问题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">背包问题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">今日头条笔试题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1352,6 +1344,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">递推</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">今日头条笔试题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1451,6 +1447,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">背包问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">时间戳</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">datetime</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vim</a>
               </li>
              
@@ -1479,14 +1487,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">归并排序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">基础算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">推荐系统</a>
               </li>
              
@@ -1500,6 +1500,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">后端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">归并排序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">基础算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1543,11 +1551,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搜索引擎</a>
+                <a href="javascript:void(0)" class="js-tag color5">构造函数</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">构造函数</a>
+                <a href="javascript:void(0)" class="js-tag color5">搜索引擎</a>
               </li>
             
             <div class="clearfix"></div>
